@@ -32,68 +32,140 @@ public class Policy{
    
    
    // Define 'Setters'
+   /*
+      setNumber sets the User's policy number
+      @param usernumber The user's policy number
+   */
+   
    public void setNumber(int usernumber){
       number = usernumber;
    }
+   
+   
+   /*
+      setProvider sets the User's provider name
+      @param userprovider The user's policy number
+   */
    public void setProvider(String userprovider){
       providerName = userprovider;
    }
+   
+   /*
+      setFirst sets the User's first name
+      @param userfirst The user's first name
+   */
    public void setFirst(String userfirst){
       firstName = userfirst;
    }
+   
+   /*
+      setLast sets the User's last name
+      @param userlast The user's last name
+   */
    public void setLast(String userlast){
       lastName = userlast;
    }
+   
+   /*
+      setAge sets the User's age
+      @param userage The user's age
+   */
    public void setAge(int userage){
       age = userage;
    }
+   
+   /*
+      setStatus sets the User's policy status
+      @param userstatus The user's policy status
+   */
    public void setStatus(String userstatus){
       smokingStatus = userstatus;
    }
+   
+   /*
+      setHeight sets the User's height
+      @param userheight The user's height
+   */
    public void setHeight(double userheight){
       height = userheight;
    }
+   
+   /*
+      setWeight sets the User's weight
+      @param userweight The user's weight
+   */
    public void setWeight(double userweight){
       weight = userweight;
    }
    
    //Define 'Getters'
+   
+   /*
+      @return The user's policy number
+   */
    public int getNumber(){
       return number;
    }
    
+   /*
+      @return The user's provider
+   */
    public String getProvider(){
       return providerName;
    }
    
+   /*
+      @return The user's first name
+   */
    public String getFirst(){
       return firstName;
    }
    
+   /*
+      @return The user's last name
+   */
    public String getLast(){
       return lastName;
    }
    
+   /*
+      @return The user's age
+   */
    public int getAge(){
       return age;
    }
    
+   /*
+      @return The user's policy status
+   */
    public String getStatus(){
       return smokingStatus;
    }
    
+   /*
+      @return The user's height
+   */
    public double getHeight(){
       return height;
    }
    
+   /*
+      @return The user's weight
+   */
    public double getWeight(){
       return weight;
    }
    
+   /*
+      @return The user's calculated BMI
+   */
    public double calcBMI(){ // Calculate the Body Mass Index
       return (weight * 703) / (height * height);
    }
    
+   /*
+      @return The user's calculated Insurance Price
+   */
    public double calcInsurancePrice(){ // Calculate the Insurance Policy Price
       double cost = 600.00;
       if (age > 50){
