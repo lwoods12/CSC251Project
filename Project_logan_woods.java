@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.io.*;
 import java.util.ArrayList;
 /*
-Logan Woods - CSC251-N803 Project 2
+Logan Woods - CSC251-N803 Project 3
 */
 
 public class Project_logan_woods{
