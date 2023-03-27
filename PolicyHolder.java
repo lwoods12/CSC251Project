@@ -6,6 +6,7 @@ public class PolicyHolder{
    private String smokingStatus;
    private double height;
    private double weight;
+   public static int numPolicyHolders = 0;
    
    public PolicyHolder(){ //no-arg constructor
       firstName = "John";
@@ -14,15 +15,19 @@ public class PolicyHolder{
       smokingStatus = "non-smoker";
       height = 62.0;
       weight = 250.5;
+      //numPolicyHolders++;
+      policy = new Policy();
   }
   
-  public PolicyHolder(String userfirst, String userlast, int userage, String userstatus, double userheight, double userweight){ //Define constructor with args
+  public PolicyHolder(String userfirst, String userlast, int userage, String userstatus, double userheight, double userweight, Policy userpolicy){ //Define constructor with args
       firstName = userfirst;
       lastName = userlast;
       age = userage;
       smokingStatus = userstatus;
       height = userheight;
       weight = userweight;
+      numPolicyHolders++;
+      policy = userpolicy;
    }
    
    /*
@@ -139,5 +144,26 @@ public class PolicyHolder{
          cost = cost + ((calcBMI() - 35)*20);
       }
       return cost;
+   }
+   
+   public int getNumHolders(){
+      return numPolicyHolders;
+   }
+   
+   public String toString(){
+      String str = "Policyholder’s First Name: "+ this.getFirst() + 
+      "\nPolicyholder’s Last Name: " + this.getLast() + 
+      "\nPolicyholder’s Age: " + this.getAge() +     
+      "\nPolicyholder’s Smoking Status: " + this.getStatus() +
+      "\nPolicyholder’s Height: " + this.getHeight() +
+      "\nPolicyholder’s Weight: " + this.getWeight() +
+      "\nPolicyholder’s BMI: " + this.calcBMI() + 
+      this.policy.toString();
+      
+      return str;
+   }
+   
+   public Policy getPolicy(){
+      return new Policy(this.policy.getNumber(),this.policy.getProvider());
    }
 }
